@@ -4,3 +4,5 @@
     email : string;
     password : string;
 }
+
+export type CreateUser = Omit<User, 'id'>;
