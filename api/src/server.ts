@@ -1,10 +1,12 @@
-import Express from "express";
+import express from "express";
 import userRouter from './routes/user.route.ts';
 
-const server = Express();
+const server = express();
 
-server.use(Express.json());
+server.use(express.json());
 
 server.use('/users', userRouter);
+
+server.use(express.static('/workspaces/Corcoiote01/web'));
 
 server.listen(3000);
